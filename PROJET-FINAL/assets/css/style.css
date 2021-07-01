@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/* *************** GENERAL ******************* 
+**************************************************/
+:root {
+    --text-color : #FB5A3C; 
+    --background-color : #E3682B; 
+    --btn-color : #E32B40;
+    --color-secondary : whitesmoke; 
+
+}
+
+* { box-sizing: border-box;
+
+}
+
+html { 
+    font-size :62.5% ;
+}
+
+body { 
+font-size : 1.6rem ;
+ background-color: var(--background-color);
+}
+
+.container {
+    max-width:1400px;
+    margin:auto;
+}
+
+img {
+    width: 100%; 
+}
+
+a {
+    text-decoration:none; 
+    color:black;
+}
+
+li {
+    list-style-type: none; 
+}
+
+.clear {
+    clear:both;
+}
+
+h1,h2,h3 {
+    color : var(--text-color);
+    text-align: center; 
+}
+
+section {
+    background-color: white ;
+    margin: 0.5em;
+    padding: 1em; 
+}
+
+p{
+    margin:0.5em 1em; 
+    text-align: justify;
+}
+
+
+/* **************  TEMPLATE *******************
+************************************************/
+
+
+/* ******* HEADER ********* */
+header .container {
+    background-color: white;
+}
+
+header strong {
+    font-size:3rem; 
+    font-family: 'Satisfy', cursive;
+    font-weight:bold;
+    color: var(--text-color);
+    display:block;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display:none; 
+}
+
+/* ******  FOOTER *********** */
+
+footer {
+    background-color: var(--text-color);
+    color: var(--color-secondary);
+}
+
+footer .container {
+    display:flex; 
+    flex-direction: column; 
+}
+
+footer strong {
+    display : block;
+    border-bottom : 1px solid var(--color-secondary); 
+    margin:1em;
+    margin-left: 2em; 
+}
+
+footer a { 
+    color:var(--color-secondary);
+}
+
+footer li {
+    margin: 1em; 
+}
+
+.fontawesome {
+    margin:1em; 
+    text-align:center;
+    font-size: 3rem; 
+
+}
+
+footer p {
+    font-size: 0.8rem; 
+    text-align: center; 
+}
+
+
+
+/* **************** PAGE HOME *****************
+********************************************** */
+.home h1 {
+    color: var(--color-secondary);
+}
+
+.img-home {
+    display : none; 
+}
+
+/* rubrique formulaire connect/register */
+
+.form {
+    background-color: white;
+    padding:0.5em 0; 
+}
+
+.form-connect {
+    display:flex; 
+    flex-direction:column; 
+    background-image:url(../img/livreHome.jpg);
+    background-size: cover;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.form-connect input {
+    margin:0.8em;
+    border-radius: 30px;
+    height: 30px;
+}
+
+input[type=submit]{
+
+    background-color: var(--btn-color);
+    margin:1em; 
+    padding:0.3em;
+    border-radius: 30px;
+    color: var(--color-secondary);
+    border: solid var(--color-secondary) 1px ; 
+}
+
+/* rubrique général */
+
+.btn {
+    display: block; 
+    background-color : var(--btn-color);
+    padding: 0.8em; 
+    border-radius : 30px;
+    margin: 1em; 
+    color : var(--color-secondary);
+    text-align:center; 
+    width: 50%; 
+    align-items:center;
+    margin:auto; 
+
+}
+
+/* rubrique concours */
+.concours {
+    color : var(--color-secondary); 
+    text-align: center;  
+    margin-bottom:1em;
+
+}
+
+.concours p {
+    font-size:2rem; 
+
+}
+
+.concours span a {
+    display:inline-block;
+    width: 80%; 
+    font-size: 2.5rem; 
+    font-weight:bold; 
+    text-align: center; 
+    color: var(--color-secondary);
+    padding:0.5em; 
+    margin: 4em 0; 
+    background-color:rgba(227, 43, 64, 0.56);
+    border-radius: 30px;
+
+}
+
+.bgimg-concours {
+    background-image: url(../img/img-concours.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 5rem; 
+
+}
+
+.concours .btn {
+
+    bottom: 1em;  
+
+}
+
+/* ******************RESPONSIVE mobil-first***********************************************
+*********************************************************************
+*************************************************************************** */
+/* TABLETTE */
+@media screen and (min-width: 768px){
+
+    header .container {
+        padding-bottom: 1em; 
+    }
+
+    header nav {
+        display: block;
+        margin: 1em;
+    }
+
+    header nav ul {
+        display:flex; 
+        justify-content: space-around;
+
+    }
+
+    header nav a { 
+        color : var(--text-color);
+        font-size: 2rem; 
+        padding:0.5em; 
+        margin:0.2em;
+        border : var(--background-color) solid 2px;
+        border-radius: 20px;
+
+    }
+    .img-home {
+            display : block; 
+        }
+
+    .form-connect {
+        background-image: none; 
+    }
+
+    .home p {
+        font-size: 1.8rem;
+        line-height: 1.3em;
+    }
+
+    .concours p {
+        font-size: 3rem; 
+    }
+  
+    .concours span a {
+        font-size: 5rem; 
+    }
+}
+
+/* DEKSTOP  */
+@media screen and (min-width: 1025px){
+    
+    body {
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,104,43,0.9244572829131653) 48%, rgba(227,43,64,1) 97%);
+    }
+
+    header{
+        padding-top:1em;
+    }
+
+     header .container {
+        display : flex; 
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+
+    header strong {
+        font-size:4rem; 
+    }
+
+    header nav a {
+        margin: 1.3em;
+    }
+
+    header nav a:hover {
+        background-color: var(--btn-color);
+        color:var(--color-secondary);
+    }
+
+    /* partie formulaire connection */
+    .form-connect {
+        display:flex; 
+        flex-direction:row; 
+        justify-content: space-evenly;
+
+    }
+
+    .form-connect input {
+        margin:0.8em;
+        height: 40px;
+        flex-basis: 25%;
+        font-size: 1.8rem;
+    }
+    
+    input[type=submit]{
+
+        margin:1em; 
+        padding:0.5em;
+    }
+
+    input[type=submit]:hover {
+        border: black 1px solid;
+    }
+
+    section {
+        margin-bottom: 4em; 
+    }
+/* voir pour le footer en tablette !!! */
+}
